@@ -1,0 +1,10 @@
+node_modules/
+bower_components/
+jspm_packages/
+src/app.config.json
+.sass-cache/
+.tmp/
+dist/
+*.iml
+.idea
+*.log

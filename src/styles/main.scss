@@ -1,0 +1,156 @@
+#content {
+  display: flex;
+  flex-flow: row;
+  height: 400px;
+  padding: 50px;
+}
+
+.wizard {
+  position: relative;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  margin: 0 10px 10px;
+  border: 1px solid #b2b2b2;
+  border-radius: 2px;
+  background: #f6f6f6;
+  width: 300px;
+}
+
+#wizard-title {
+  display: flex;
+  flex-flow: row;
+  border-bottom: 1px solid #b2b2b2;
+  background: #5cb85c;
+  padding: 1px;
+}
+
+#wizard-title span:first-child {
+  padding: 5px 20px;
+  color: white;
+}
+
+.close-form {
+  font-weight: bold;
+  color: #000000;
+  z-index: 100;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.wiz-step-title {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.wiz-step-title span:first-child {
+  margin-right: 10px;
+}
+
+.wiz-step {
+  position: relative;
+  display: flex;
+  flex-flow: column;
+  margin: 20px;
+  height: 260px;
+  font-size: 12px;
+}
+
+#banner {
+  height: 400px;
+  width: 239px;
+  margin-right: 40px;
+
+  img {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.button-block {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.active-step {
+  font-size: 20px;
+  font-weight: bold;
+  color: green;
+}
+
+.wiz-slider {
+  margin: 5px 10px 40px;
+
+  .slider.slider-horizontal {
+    width: 250px;
+  }
+}
+
+.slider-markup {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 250px;
+  top: -40px;
+  margin: 0 10px;
+}
+
+.wiz-slider .slider-selection {
+  background: #5cb85c;
+}
+
+.wiz-slider .slider-track-high {
+  background: #d1d1d1;
+}
+
+.wiz-slider .slider-handle {
+  background: #b2b2b2;
+}
+
+.wiz-slider .slider-handle.round {
+  border-radius: 7px;
+}
+
+.wiz-slider .slider .tooltip.top {
+  margin-top: 24px;
+}
+
+.wiz-slider .slider .tooltip-inner {
+  background: green;
+}
+
+.wiz-slider .tooltip.top .tooltip-arrow {
+  bottom: 27px;
+  left: 50%;
+  margin-left: -5px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid green;
+  border-top: none;
+}
+
+.form-group span {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+span.error {
+  color: red;
+}
+
+input.error {
+  border: 1px solid red;
+}

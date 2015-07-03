@@ -1,0 +1,14 @@
+<div class="wiz-step" ng-controller="WizThirdController as wiz3">
+    <div class="form-group">
+        <span ng-bind="wiz3.name"></span>
+        <input type="text" class="form-control"
+               data-ctrl="wiz3"
+               ng-model="wiz.model.name"
+               ng-class="{error: wiz3.error.length > 0}"
+               watch-error/>
+        <span class="error" ng-bind="wiz3.error"></span>
+    </div>
+    <div class="button-block">
+        <button type="button" ng-click="wiz3.validate()" class="btn btn-success">{{wiz.btnContinue}}</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<div class="wiz-step" ng-controller="WizSecondController as wiz2">
+    <div class="form-group">
+        <span ng-bind="wiz2.ageTitle"></span>
+        <input type="text" class="form-control"
+               data-ctrl="wiz2"
+               ng-model="wiz.model.age"
+               ng-class="{error: wiz2.error.length > 0}"
+               watch-error/>
+        <span class="error" ng-bind="wiz2.error"></span>
+    </div>
+    <div class="button-block">
+        <button type="button" ng-click="wiz2.validate()" class="btn btn-success">{{wiz.btnContinue}}</button>
+    </div>
+</div>
