@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Polygant</title>
+
+    <!-- build:css(.tmp) styles/main.min.css -->
+    <link rel="stylesheet" href="styles/main.css"/>
+    <!-- endbuild -->
+</head>
+<body>
+
+<div id="content">
+
+    <div id="banner">
+        <img src="images/banner.png" banner/>
+    </div>
+
+    <div ui-view></div>
+</div>
+
+<!-- build:js(.) scripts/main.min.js -->
+<!-- inject:build:js -->
+<!-- endinject -->
+<!-- endbuild -->
+
+<!-- build:remove -->
+<script src="jspm_packages/system.js"></script>
+<script src="jspm.config.js"></script>
+<script>
+    System.import('app/main').catch(console.error.bind(console)); // make sure any errors are print to console
+</script>
+<!-- endbuild -->
+
+</body>
+</html>
