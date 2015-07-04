@@ -1,0 +1,18 @@
+<div class="wiz-step-content" ng-controller="WizFourthController as wiz4">
+    <div class="form-group">
+        <span ng-bind="wiz4.nameTitle"></span>
+        <input type="text" class="form-control"
+               ng-model="wiz.model.name"/>
+    </div>
+    <div class="form-group">
+        <span ng-bind="wiz4.emailTitle"></span>
+        <input type="text" class="form-control"
+               ng-model="wiz.model.email"/>
+    </div>
+    <div class="form-group">
+        <span ng-bind="wiz4.phoneTitle"></span>
+        <input type="text" class="form-control short"
+               masked-input
+               ng-model="wiz.model.phone"/>
+    </div>
+</div>

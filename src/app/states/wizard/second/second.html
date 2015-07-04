@@ -1,14 +1,31 @@
-<div class="wiz-step" ng-controller="WizSecondController as wiz2">
-    <div class="form-group">
-        <span ng-bind="wiz2.ageTitle"></span>
-        <input type="text" class="form-control"
-               data-ctrl="wiz2"
-               ng-model="wiz.model.age"
-               ng-class="{error: wiz2.error.length > 0}"
-               watch-error/>
-        <span class="error" ng-bind="wiz2.error"></span>
+<div class="wiz-step-content" ng-controller="WizSecondController as wiz2">
+    <div class="form-block">
+        <div class="form-group age">
+            <span ng-bind="wiz2.ageTitle"></span>
+            <input type="text" class="form-control"
+                   data-ctrl="wiz2"
+                   ng-model="wiz.model.age"
+                   ng-class="{error: wiz2.error.length > 0}"
+                   watch-error/>
+            <span class="error" ng-bind="wiz2.error"></span>
+        </div>
+        <div class="form-group exceeded-time">
+            <span ng-bind="wiz2.exceededTimeTitle"></span>
+            <select ng-model="wiz.model.debts"
+                    ng-init="wiz.model.debts = wiz2.outstandings[0]"
+                    ng-options="item.name for item in wiz2.outstandings"></select>
+        </div>
     </div>
-    <div class="button-block">
-        <button type="button" ng-click="wiz2.validate()" class="btn btn-success">{{wiz.btnContinue}}</button>
+    <div class="form-block">
+        <div class="form-group citizen">
+            <span ng-bind="wiz2.citizenTitle"></span>
+
+            <div class="form-block">
+                <input type="radio" name="citizen" value="yes" ng-model="wiz.model.citizenship"/>
+                <span ng-bind="wiz2.yesTitle"></span>
+                <input type="radio" name="citizen" value="no" ng-model="wiz.model.citizenship"/>
+                <span ng-bind="wiz2.noTitle"></span>
+            </div>
+        </div>
     </div>
 </div>

@@ -11,6 +11,7 @@ function sliderDirective() {
         '<div class="wiz-slider">' +
         '<input type="text"/>' +
         '</div>' +
+        '<div class="scales"></div>' +
         '<div style="position: relative" class="slider-markup">' +
         '<div id="min-value"></div>' +
         '<div id="max-value"></div>' +
