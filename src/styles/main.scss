@@ -39,8 +39,12 @@
 
 .close-form {
   z-index: 100;
-  margin-right: 20px;
+  margin-right: 15px;
+  margin-top: 5px;
+  width: 20px;
+  height: 15px;
   cursor: pointer;
+  background: url("../images/close.png") no-repeat;
 }
 
 .wizard-background {
