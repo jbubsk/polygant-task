@@ -182,11 +182,19 @@ input.error {
   border: 1px solid red !important;
 }
 
+@-moz-document url-prefix() {
+  input[type='text'], select {
+    padding: 0;
+  }
+}
+
 input[type='text'], select {
   height: 20px !important;
   border-radius: 4px;
   border: 1px solid green;
   text-align: center;
+  font-size: 12px !important;
+  font-size-adjust:0.5;
 }
 
 input[type='text'].short {
