@@ -188,9 +188,6 @@ gulp.task('htmlhint', 'Hint HTML files', function () {
  * Compile SASS files into the main.css.
  */
 gulp.task('sass', 'Compile sass files into the main.css', function () {
-    // if it's set to `true` the gulp.watch will keep gulp from stopping
-    // every time we mess up sass files
-    var errLogToConsole = ENV === 'dev' || ENV === 'test';
     return gulp.src(
         [
             paths.app.stylesMain,
@@ -200,7 +197,9 @@ gulp.task('sass', 'Compile sass files into the main.css', function () {
     )
         .pipe($.changed(paths.tmp.styles, {extension: '.scss'}))
         .pipe($.sourcemaps.init())
-        .pipe($.sass({style: 'compressed', errLogToConsole: errLogToConsole}))
+        // if it's set to `true` the gulp.watch will keep gulp from stopping
+        // every time we mess up sass files
+        .pipe($.sass({style: 'compressed', errLogToConsole: true}))
         .pipe($.autoprefixer('last 2 version'))
         .pipe($.concat('main.css'))
         .pipe($.sourcemaps.write('../maps'))

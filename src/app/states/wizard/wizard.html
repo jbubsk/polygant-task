@@ -1,14 +1,24 @@
-<div class="wizard wizard-animation" ng-controller="WizardController as wiz">
+<div class="wizard" ng-controller="WizardController as wiz">
     <div id="wizard-title">
         <span ng-bind="wiz.title"></span>
-        <span ng-click="wiz.close()" class="close-form">x</span>
+
+        <div ng-click="wiz.close()" class="close-form">
+            <img src="images/close.png" alt=""/>
+        </div>
     </div>
-    <div class="wiz-step-title">
-        <span ng-bind="wiz.stepTitle"></span>
-        <span ng-bind="wiz.stepWord"></span>
-        <span ng-bind="wiz.currentStep" class="active-step"></span>
-        <span>&nbsp;из&nbsp;</span>
-        <span ng-bind="wiz.steps"></span>
+    <div class="wizard-background">
+        <div id="wizard-step-section">
+            <div class="wiz-step-title">
+                <span ng-bind="wiz.stepTitle"></span>
+                <span ng-bind="wiz.stepWord"></span>
+                <span ng-bind="wiz.currentStep" class="active-step"></span>
+                <span>&nbsp;из&nbsp;</span>
+                <span ng-bind="wiz.steps"></span>
+            </div>
+            <div id="ui-view-second-level" ui-view></div>
+        </div>
+        <div class="button-block">
+            <button type="button" ng-click="wiz.next()" class="btn btn-success">{{wiz.btnContinue}}</button>
+        </div>
     </div>
-    <div ui-view></div>
 </div>

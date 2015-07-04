@@ -1,14 +1,21 @@
-<div class="wiz-step" ng-controller="WizThirdController as wiz3">
+<div class="wiz-step-content" ng-controller="WizThirdController as wiz3">
     <div class="form-group">
-        <span ng-bind="wiz3.name"></span>
-        <input type="text" class="form-control"
-               data-ctrl="wiz3"
-               ng-model="wiz.model.name"
-               ng-class="{error: wiz3.error.length > 0}"
-               watch-error/>
-        <span class="error" ng-bind="wiz3.error"></span>
+        <span ng-bind="wiz3.registrationTitle"></span>
+        <select ng-model="wiz.model.registration"
+                ng-options="place for place in wiz3.regPlaces"></select>
     </div>
-    <div class="button-block">
-        <button type="button" ng-click="wiz3.validate()" class="btn btn-success">{{wiz.btnContinue}}</button>
+    <div class="form-group">
+        <span ng-bind="wiz3.livingTitle"></span>
+        <select ng-model="wiz.model.livePlace"
+                ng-options="place for place in wiz3.livPlaces"></select>
+    </div>
+    <div class="form-group">
+        <span ng-bind="wiz3.workExpTitle"></span>
+        <select ng-model="wiz.model.workExperience"
+                ng-options="exp for exp in wiz3.workExperience"></select>
+    </div>
+    <div class="form-block">
+        <span ng-bind="wiz3.outcomeTitle"></span>
+        <input type="text" ng-model="wiz.model.outcome"/>
     </div>
 </div>

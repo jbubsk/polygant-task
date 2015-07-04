@@ -1,0 +1,54 @@
+#ui-view-first-level.ng-enter, #ui-view-first-level.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .5s ease-in-out;
+  transition:all .5s ease-in-out;
+}
+
+#ui-view-first-level.ng-enter {
+  left: 35px;
+  opacity: 0;
+}
+
+#ui-view-first-level.ng-enter-active {
+  left: 300px;
+  opacity: 1;
+}
+
+#ui-view-first-level.ng-leave {
+  left: 300px;
+  opacity: 1;
+}
+
+#ui-view-first-level.ng-leave-active {
+  left: 35px;
+  opacity: 0;
+}
+
+#ui-view-second-level.ng-enter, #ui-view-second-level.ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  -webkit-transition:all .3s linear;
+  transition:all .3s linear;
+}
+
+#ui-view-second-level.ng-enter {
+  left: 300px;
+  opacity: 0;
+}
+
+#ui-view-second-level.ng-enter-active {
+  left: 10px;
+  opacity: 1;
+}
+
+#ui-view-second-level.ng-leave {
+  opacity: 1;
+}
+
+#ui-view-second-level.ng-leave-active {
+  left: -300px;
+  opacity: 0;
+}

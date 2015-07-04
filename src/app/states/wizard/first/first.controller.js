@@ -1,21 +1,20 @@
 'use strict';
 
-class WizFirstController{
+import  AbstractWizardController from '../abstract.controller';
+
+class WizFirstController extends AbstractWizardController {
     constructor($scope) {
-        this.$scope = $scope;
+        super($scope);
         this.creditSum = 'Сумма кредита:';
         this.inCurrency = '(рублей)';
 
         this.creditTerm = 'Срок кредитования:';
         this.inMonthes = '(месяцев)';
-        $scope.wiz.setCurrentStep(1);
-    }
 
-    validate() {
-        // do some validation and if valid then
-        this.$scope.wiz.next();
+        this.getParent().setCurrentStep(1);
+        this.getParent().setStepTitle('Информация о кредите');
     }
 }
-WizFirstController.$inject = ['$scope'];
+WizFirstController.$inject = ['$scope', '$state'];
 
 export default WizFirstController;

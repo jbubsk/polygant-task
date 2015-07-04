@@ -2,13 +2,13 @@
 
 import template from './second.html!text';
 
-function homeRoute($stateProvider) {
+function route($stateProvider) {
     $stateProvider
         .state('wizard.2', {
             url: '/2',
             template: template
         });
 }
-homeRoute.$inject = ['$stateProvider'];
+route.$inject = ['$stateProvider'];
 
-export default homeRoute;
+export default route;
