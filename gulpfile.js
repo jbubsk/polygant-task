@@ -342,6 +342,9 @@ gulp.task('default', 'Watch files and build environment', ['serve']);
 gulp.task('serve:dist', 'Serve the prod environment', ['build'], function () {
     startBrowserSync([paths.build.dist.basePath]);
 });
+gulp.task('serve:gh-pages', 'Serve the prod environment', ['build'], function () {
+    startBrowserSync(['./']);
+});
 
 //---------------------------------------------
 //               BUILD TASKS
